@@ -14,7 +14,7 @@
 }
 
  .u-section-1-1 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/210403-muhabura-mbjorgum-24.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/Gorrilla with baby.jpg');
   background-position: 50% 50%;
 }
 
@@ -650,7 +650,7 @@
 }
 
  .u-section-1-3 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/MG_8368-1024x683.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/Canopy Nyungwe.JPG');
   background-position: 50% 50%;
 }
 
@@ -966,7 +966,7 @@
     grid-auto-columns: calc(100% - 0px);
   }
 } .u-section-2 {
-  background-image: url("images/landscape-wajag-island-surrounded-by-sea-cloudy-sky-indonesia4.jpg");
+  background-image: url("images/Volcanoe\ landscape.jpg");
   background-position: 50% 50%;
 }
 
@@ -1137,8 +1137,8 @@
 
 .u-section-3 .u-image-2 {
   min-height: 536px;
-  background-image: url("images/ghgh5.jpg");
-  background-position: 0% 50%;
+  background-image: url("images/INZOZI TOURS_79.jpg");
+  background-position: 0% 30%;
 }
 
 .u-section-3 .u-container-layout-2 {
@@ -1262,7 +1262,7 @@
 }
 
 .u-section-4 .u-image-1 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/Untitled-3.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/Kigali\ city\ destination.jpg');
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -1299,7 +1299,7 @@
 }
 
 .u-section-4 .u-image-2 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/53455.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/Gorilla\ volcanoes\ park.jpg');
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -1375,7 +1375,7 @@
 }
 
 .u-section-4 .u-image-4 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/r67y54.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/Lake\ kivu\ destination.jpg');
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -1412,7 +1412,7 @@
 }
 
 .u-section-4 .u-image-5 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/6465.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/nyungwe\ park\ destination.jpg');
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -1449,7 +1449,7 @@
 }
 
 .u-section-4 .u-image-6 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/tytytytyu.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/Rwanda\ cultural\ destination.jpg');
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -2053,7 +2053,7 @@
 .u-section-6 .u-image-1 {
   width: 83px;
   height: 83px;
-  background-image: url("images/pexels-photo-8386597.jpeg");
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e4/ca/default-avatar-2020-51.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -2087,7 +2087,7 @@
 .u-section-6 .u-image-2 {
   width: 83px;
   height: 83px;
-  background-image: url("images/pexels-photo-8467417.jpeg");
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/ee/10/default-avatar-2020-8.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
