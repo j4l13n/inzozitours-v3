@@ -28,7 +28,48 @@
 		"logo": "images/inzozi-logo-xs.png",
 		"sameAs": []
 }</script>
-    <meta name="theme-color" content="#04a735">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(acc => {
+      const header = acc.querySelector(".accordion-header");
+      const content = acc.querySelector(".accordion-content");
+
+      header.addEventListener("click", function() {
+        // Toggle active class on content
+        content.classList.toggle("active");
+
+        // Collapse other accordions
+        accordions.forEach(a => {
+          if (a !== acc) {
+            a.querySelector(".accordion-content").classList.remove("active");
+          }
+        });
+      });
+    });
+  });
+</script>
+<style>
+  .accordion {
+    margin-bottom: 4px; /* Adjust as needed */
+  }
+  .accordion-header {
+    cursor: pointer;
+    padding: 2px;
+  }
+  .accordion-title {
+    margin: 0;
+  }
+  .accordion-content {
+    display: none;
+    padding: 2px;
+  }
+  .accordion-content.active {
+    display: block;
+  }
+</style>
+    <meta name="theme-color" content="#026720">
     <meta property="og:title" content="Itineraries">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
@@ -62,12 +103,11 @@
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Home.html" rel="nofollow" style="padding: 10px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Itineraries.html" rel="nofollow" style="padding: 10px;">Rwanda Tours</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="About.html" rel="nofollow" style="padding: 10px;">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Team.html" rel="nofollow" style="padding: 10px;">Team</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Contact.html" rel="nofollow" style="padding: 10px;">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Gallery.html" rel="nofollow" style="padding: 10px;">Gallery</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Itineraries.html" rel="nofollow" style="padding: 10px;">Itineraries</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Events.html" rel="nofollow" style="padding: 10px;">Events</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-palette-2-base" href="Contact.html" rel="nofollow" style="padding: 10px;">Contact</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -75,12 +115,11 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" rel="nofollow">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Itineraries.html" rel="nofollow">Rwanda Tours</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html" rel="nofollow">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Team.html" rel="nofollow">Team</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html" rel="nofollow">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Gallery.html" rel="nofollow">Gallery</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Itineraries.html" rel="nofollow">Itineraries</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Events.html" rel="nofollow">Events</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html" rel="nofollow">Contact</a>
 </li></ul>
               </div>
             </div>
@@ -90,62 +129,254 @@
       </div></header>
     <section class="u-align-center u-clearfix u-container-align-left u-image u-shading u-section-1" id="carousel_790c" data-image-width="1980" data-image-height="1320">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h4 class="u-align-left u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">travel agency</h4>
-        <h1 class="u-align-left u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500"> Your Adventure Starts Here</h1>
-        <a href="#" class="u-active-white u-align-left u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">start planning</a>
+        <h4 class="u-align-left u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">INZOZI TOURS LIMITED</h4>
+        <h1 class="u-align-left u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500"> The Adventure of a Lifetime </h1>
+        <a href="#" class="u-active-white u-align-left u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">Book Now</a>
       </div>
     </section>
     <section class="u-clearfix u-container-align-center u-palette-5-dark-3 u-section-2" id="sec-e24d">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500"> Vacation Adventures Take Many Forms</h2>
+        <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500"> Tours Adventures Take Many Forms</h2>
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-container-align-center-lg u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <h4 class="u-align-center u-text u-text-default u-text-2">Ocean Cruising</h4>
-                <p class="u-align-center u-text u-text-default u-text-3">Sample text. Click to select the Text Element.</p>
+              <!-- <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                <h4 class="u-align-center u-text u-text-default u-text-2">Congo Nile Trail Adventure</h4>
+                <p class="u-align-center u-text u-text-default u-text-3">Experience the ultimate adventure on Rwanda's Congo Nile Trail. Spanning 11 days and 10 diverse sections, this 227-kilometer trek showcases breathtaking landscapes, cultural encounters, and challenging terrain. Priced at 1500 USD per person, inclusive of accommodation, meals, and expert guidance in English or French. Ideal for all group sizes, discover the best of Rwanda's natural beauty and community hospitality along this iconic trail.</p>
                 <div class="u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1"></div>
                 <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+              </div> -->
+              <div class="u-container-align-center-lg u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                  <h4 class="u-align-center u-text u-text-default u-text-2">11 days full of Congo Nile Trail</h4>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Overview</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Embark on an 11-day journey along Rwanda's Congo Nile Trail, exploring 10 sections spanning 227 kilometers. This trail offers diverse landscapes, cultural encounters, and challenging terrain.</p>
+                      <ul>
+                        <li>Language: English, French</li>
+                        <li>Cost: 1500 USD per person (includes accommodation, meals, guiding)</li>
+                        <li>Capacity: Any number of people</li>
+                        <li>Duration: 7 hours per day on average</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Accommodation and Meals</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Accommodations along the trail range from budget guesthouses to upscale lodgings, providing options to suit all preferences. Each day includes breakfast, lunch, and dinner, offering a taste of local cuisine.</p>
+                      <ul>
+                        <li>Accommodation options: Cyimbiri Guest House, Kinunu Guest House, Bumba Base Camp, Dian Fossey Hotel, Karongi hotels, Karengera High School, Kumbya Retreat Centre, Ishara Beach Hotel, St. Martin Parish</li>
+                        <li>Meals: Breakfast, lunch, and dinner provided daily</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+                </div>
               </div>
             </div>
             <div class="u-container-align-center u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-2" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+              <!-- <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
                 <h4 class="u-align-center u-text u-text-default u-text-4"> Land Adventures&nbsp;</h4>
                 <p class="u-align-center u-text u-text-default u-text-5">Sample text. Click to select the Text Element.</p>
                 <div class="u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-2"></div>
                 <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-2" alt="" data-image-width="829" data-image-height="829" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+              </div> -->
+              <div class="u-container-align-center-lg u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                  <h4 class="u-align-center u-text u-text-default u-text-2">11 days full of Congo Nile Trail</h4>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Overview</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Embark on an 11-day journey along Rwanda's Congo Nile Trail, exploring 10 sections spanning 227 kilometers. This trail offers diverse landscapes, cultural encounters, and challenging terrain.</p>
+                      <ul>
+                        <li>Language: English, French</li>
+                        <li>Cost: 1500 USD per person (includes accommodation, meals, guiding)</li>
+                        <li>Capacity: Any number of people</li>
+                        <li>Duration: 7 hours per day on average</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Accommodation and Meals</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Accommodations along the trail range from budget guesthouses to upscale lodgings, providing options to suit all preferences. Each day includes breakfast, lunch, and dinner, offering a taste of local cuisine.</p>
+                      <ul>
+                        <li>Accommodation options: Cyimbiri Guest House, Kinunu Guest House, Bumba Base Camp, Dian Fossey Hotel, Karongi hotels, Karengera High School, Kumbya Retreat Centre, Ishara Beach Hotel, St. Martin Parish</li>
+                        <li>Meals: Breakfast, lunch, and dinner provided daily</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+                </div>
               </div>
             </div>
             <div class="u-container-align-center u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-3" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+              <!-- <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
                 <h4 class="u-align-center u-text u-text-default u-text-6"> Nearby Adventures</h4>
                 <p class="u-align-center u-text u-text-default u-text-7">Sample text. Click to select the Text Element.</p>
                 <div class="u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-3"></div>
                 <img class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-3" alt="" data-image-width="656" data-image-height="656" src="images/werwer.jpg" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+              </div> -->
+              <div class="u-container-align-center-lg u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                  <h4 class="u-align-center u-text u-text-default u-text-2">11 days full of Congo Nile Trail</h4>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Overview</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Embark on an 11-day journey along Rwanda's Congo Nile Trail, exploring 10 sections spanning 227 kilometers. This trail offers diverse landscapes, cultural encounters, and challenging terrain.</p>
+                      <ul>
+                        <li>Language: English, French</li>
+                        <li>Cost: 1500 USD per person (includes accommodation, meals, guiding)</li>
+                        <li>Capacity: Any number of people</li>
+                        <li>Duration: 7 hours per day on average</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Accommodation and Meals</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Accommodations along the trail range from budget guesthouses to upscale lodgings, providing options to suit all preferences. Each day includes breakfast, lunch, and dinner, offering a taste of local cuisine.</p>
+                      <ul>
+                        <li>Accommodation options: Cyimbiri Guest House, Kinunu Guest House, Bumba Base Camp, Dian Fossey Hotel, Karongi hotels, Karengera High School, Kumbya Retreat Centre, Ishara Beach Hotel, St. Martin Parish</li>
+                        <li>Meals: Breakfast, lunch, and dinner provided daily</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+                </div>
               </div>
             </div>
             <div class="u-container-align-center u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-4" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+              <!-- <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
                 <h4 class="u-align-center u-text u-text-default u-text-8">River cruising</h4>
                 <p class="u-align-center u-text u-text-default u-text-9">Sample text. Click to select the Text Element.</p>
                 <div class="u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-4"></div>
                 <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-4" alt="" data-image-width="820" data-image-height="820" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+              </div> -->
+              <div class="u-container-align-center-lg u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                  <h4 class="u-align-center u-text u-text-default u-text-2">11 days full of Congo Nile Trail</h4>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Overview</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Embark on an 11-day journey along Rwanda's Congo Nile Trail, exploring 10 sections spanning 227 kilometers. This trail offers diverse landscapes, cultural encounters, and challenging terrain.</p>
+                      <ul>
+                        <li>Language: English, French</li>
+                        <li>Cost: 1500 USD per person (includes accommodation, meals, guiding)</li>
+                        <li>Capacity: Any number of people</li>
+                        <li>Duration: 7 hours per day on average</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Accommodation and Meals</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Accommodations along the trail range from budget guesthouses to upscale lodgings, providing options to suit all preferences. Each day includes breakfast, lunch, and dinner, offering a taste of local cuisine.</p>
+                      <ul>
+                        <li>Accommodation options: Cyimbiri Guest House, Kinunu Guest House, Bumba Base Camp, Dian Fossey Hotel, Karongi hotels, Karengera High School, Kumbya Retreat Centre, Ishara Beach Hotel, St. Martin Parish</li>
+                        <li>Meals: Breakfast, lunch, and dinner provided daily</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+                </div>
               </div>
             </div>
             <div class="u-container-align-center u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-5" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
+              <!-- <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
                 <h4 class="u-align-center u-text u-text-default u-text-10">Romantic Tours</h4>
                 <p class="u-align-center u-text u-text-default u-text-11">Sample text. Click to select the Text Element.</p>
                 <div class="u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-5"></div>
                 <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-5" alt="" data-image-width="888" data-image-height="888" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+              </div> -->
+              <div class="u-container-align-center-lg u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                  <h4 class="u-align-center u-text u-text-default u-text-2">11 days full of Congo Nile Trail</h4>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Overview</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Embark on an 11-day journey along Rwanda's Congo Nile Trail, exploring 10 sections spanning 227 kilometers. This trail offers diverse landscapes, cultural encounters, and challenging terrain.</p>
+                      <ul>
+                        <li>Language: English, French</li>
+                        <li>Cost: 1500 USD per person (includes accommodation, meals, guiding)</li>
+                        <li>Capacity: Any number of people</li>
+                        <li>Duration: 7 hours per day on average</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Accommodation and Meals</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Accommodations along the trail range from budget guesthouses to upscale lodgings, providing options to suit all preferences. Each day includes breakfast, lunch, and dinner, offering a taste of local cuisine.</p>
+                      <ul>
+                        <li>Accommodation options: Cyimbiri Guest House, Kinunu Guest House, Bumba Base Camp, Dian Fossey Hotel, Karongi hotels, Karengera High School, Kumbya Retreat Centre, Ishara Beach Hotel, St. Martin Parish</li>
+                        <li>Meals: Breakfast, lunch, and dinner provided daily</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+                </div>
               </div>
             </div>
             <div class="u-container-align-center u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
+              <!-- <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
                 <h4 class="u-align-center u-text u-text-default u-text-12"> Multi-Adventure Tours</h4>
                 <p class="u-align-center u-text u-text-default u-text-13">Sample text. Click to select the Text Element.</p>
                 <div class="u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-6"></div>
                 <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-6" alt="" data-image-width="724" data-image-height="724" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+              </div> -->
+              <div class="u-container-align-center-lg u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-radius-32 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                  <h4 class="u-align-center u-text u-text-default u-text-2">11 days full of Congo Nile Trail</h4>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Overview</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Embark on an 11-day journey along Rwanda's Congo Nile Trail, exploring 10 sections spanning 227 kilometers. This trail offers diverse landscapes, cultural encounters, and challenging terrain.</p>
+                      <ul>
+                        <li>Language: English, French</li>
+                        <li>Cost: 1500 USD per person (includes accommodation, meals, guiding)</li>
+                        <li>Capacity: Any number of people</li>
+                        <li>Duration: 7 hours per day on average</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion">
+                    <div class="accordion-header u-align-center u-border-3 u-border-grey-30 u-line u-line-horizontal u-opacity u-opacity-45 u-line-1">
+                      <h5 class="accordion-title">Accommodation and Meals</h5>
+                    </div>
+                    <div class="accordion-content u-text u-text-default">
+                      <p>Accommodations along the trail range from budget guesthouses to upscale lodgings, providing options to suit all preferences. Each day includes breakfast, lunch, and dinner, offering a taste of local cuisine.</p>
+                      <ul>
+                        <li>Accommodation options: Cyimbiri Guest House, Kinunu Guest House, Bumba Base Camp, Dian Fossey Hotel, Karongi hotels, Karengera High School, Kumbya Retreat Centre, Ishara Beach Hotel, St. Martin Parish</li>
+                        <li>Meals: Breakfast, lunch, and dinner provided daily</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="u-border-9 u-border-palette-3-base u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
+                </div>
               </div>
             </div>
           </div>
